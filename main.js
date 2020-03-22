@@ -26,7 +26,7 @@ function initialise(){
     fetch('/pages/home.json')
     .then(response => response.json())
     .then(element => {
-       history.replaceState({page: element.page}, null, "");
+       history.replaceState({page: element.page}, null, "http://lachlanwhelan.com/kokosplace");
        
         render(element.page)
     })
