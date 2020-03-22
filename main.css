@@ -1,0 +1,819 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Bitter', serif;
+}
+
+.loader {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.load-fade {
+  background-color: white;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.home-header {
+  background-image: url(/images/fourth-dish.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.subscribe {
+  margin: auto;
+  padding: 1em;
+  max-width: 500px;
+}
+
+.subscribe p {
+  padding: 0;
+}
+
+input[type='submit'] {
+  max-width: 100px;
+  margin: 1em 0;
+  cursor: pointer;
+}
+
+.menu-header {
+  margin: auto;
+  margin-top: 18vh;
+  max-width: 400px;
+  text-align: center;
+}
+
+.whatsOn-header {
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.event {
+  width: 300px;
+  text-align: center;
+  margin: 3em auto;
+}
+
+.event-child {
+  margin: 3em auto;
+}
+
+#reservations-header {
+  margin-top: 16vh;
+  text-align: center;
+}
+
+.reservation-section {
+  margin-top: 2em;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reservation-section .info div {
+  margin: 1.4em;
+}
+
+.reservation-section .info p {
+  padding: 0;
+}
+
+.menu-header span, #menu-section span {
+  display: block;
+  height: 2px;
+  width: 20%;
+  background-color: #cccccc;
+  margin: 5em auto;
+}
+
+#menu-section {
+  text-align: center;
+}
+
+#menu-section h2 {
+  margin: 2em;
+}
+
+.starters, .mains, .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.meal-grp {
+  max-width: 250px;
+  margin: 1em;
+}
+
+#header-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: black;
+  padding: 1.5em;
+}
+
+.header-menu {
+  background-color: black;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  position: absolute;
+  left: 0;
+  top: 71px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.header-menu li {
+  width: 100%;
+}
+
+.header-menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  text-align: right;
+  display: block;
+  cursor: pointer;
+}
+
+.header-menu li a:hover {
+  background-color: #292929;
+}
+
+#toggle {
+  margin-left: auto;
+  width: 30px;
+  cursor: pointer;
+}
+
+#toggle span {
+  width: 100%;
+  height: 5px;
+  margin: 2px;
+  display: block;
+  background-color: white;
+}
+
+.span-out {
+  -webkit-transition: 1s -webkit-transform ease;
+  transition: 1s -webkit-transform ease;
+  transition: 1s transform ease;
+  transition: 1s transform ease, 1s -webkit-transform ease;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.span-in {
+  -webkit-transition: 1s -webkit-transform ease;
+  transition: 1s -webkit-transform ease;
+  transition: 1s transform ease;
+  transition: 1s transform ease, 1s -webkit-transform ease;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.comment {
+  display: none;
+}
+
+.title-section {
+  background-color: rgba(48, 48, 48, 0.383);
+  z-index: -1;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.title-section h3 {
+  font-size: 2em;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.title-section span {
+  height: 2px;
+  width: 30%;
+  background-color: #cccccc;
+  margin: 1em;
+}
+
+.slide {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 1s ease transform;
+  transition: 1s ease transform;
+}
+
+main .pad {
+  padding: 0 1em;
+}
+
+main section h2 {
+  text-align: center;
+  margin: 2em 0;
+}
+
+p {
+  margin: 1em auto;
+  line-height: 28px;
+}
+
+#sample-menu-title {
+  font-size: 1.8em;
+  margin: 1em;
+}
+
+.space-blocker {
+  height: 20px;
+}
+
+.line-space {
+  height: 2px;
+  width: 30%;
+  background-color: #cccccc;
+  margin: 1em;
+  display: block;
+  margin: 1em auto 0;
+}
+
+.image-section {
+  height: 80vh;
+  background-image: url(/images/chicken-tanban.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-section#restaurant {
+  background-image: url(/images/restaurant.png);
+}
+
+.image-section#info {
+  background-image: url(/images/bar.png);
+  color: white;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu h3 {
+  margin: 1em 0;
+}
+
+button {
+  color: white;
+  display: block;
+  background-color: #3a3939;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 1em;
+  margin: 1em auto;
+  padding: 10px;
+  border: solid black 2px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #575757;
+}
+
+form label {
+  display: block;
+}
+
+form input, textarea {
+  border: #d6d6d6 solid 2px;
+  padding: 1em;
+  margin: 0;
+  width: 100%;
+  outline: none;
+}
+
+form textarea {
+  min-height: 200px;
+}
+
+form .input-grp {
+  margin: 1em 0;
+}
+
+#info h3:nth-child(2) {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.info-grp {
+  margin: 2em 0;
+}
+
+#info p:first-child {
+  text-align: center;
+}
+
+.info-grp h3 {
+  font-size: 1.3em;
+}
+
+.info-grp p {
+  margin: 0 0 0.5em;
+}
+
+.info-grp a {
+  color: white;
+  text-decoration: none;
+}
+
+.socials {
+  background-color: black;
+  text-align: center;
+}
+
+.fa {
+  margin: 10px;
+  color: white;
+}
+
+.fa:hover {
+  color: #414141;
+}
+
+.footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+}
+
+.footer-menu li {
+  display: inline;
+  margin: 0.6em;
+}
+
+.footer-menu li a {
+  text-decoration: none;
+  font-size: 0.8em;
+  color: black;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .logo {
+  padding: 0.6em 0;
+}
+
+@media only screen and (min-width: 667px) {
+  main section:first-child h2 {
+    font-size: 2em;
+  }
+  main section p {
+    font-size: 1.2em;
+  }
+  .menu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu div {
+    text-align: center;
+    max-width: 220px;
+  }
+  button {
+    margin-bottom: 2em;
+  }
+  form {
+    max-width: 500px;
+    margin: auto;
+  }
+  .input-grp select {
+    font-size: 1em;
+  }
+  #info {
+    height: auto;
+  }
+  #info > p {
+    text-align: center;
+  }
+  .info-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .info-grp {
+    max-width: 200px;
+  }
+  .info-grp p {
+    font-size: 1em;
+    margin-top: 1em;
+  }
+  .socials a {
+    margin: 1em;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  #header-nav {
+    z-index: 1;
+  }
+  main section:first-child h2 {
+    margin: 3em;
+  }
+  main section:first-child p:last-child {
+    margin-bottom: 2em;
+  }
+  main section > p {
+    margin: 2em;
+  }
+  form input[type='submit'] {
+    margin-bottom: 2em;
+  }
+  .menu-header {
+    max-width: 600px;
+  }
+  .menu-header span, #menu-section span {
+    display: block;
+    height: 2px;
+    width: 20%;
+    background-color: #cccccc;
+    margin: 5em auto;
+  }
+  #menu-section {
+    text-align: center;
+  }
+  #menu-section h2 {
+    margin: 2em;
+  }
+  .starters, .mains, .desserts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .meal-grp {
+    width: 350px;
+    margin: 1em;
+  }
+}
+
+@media only screen and (min-width: 952px) {
+  .title-section span {
+    max-width: 150px;
+  }
+  #header-nav {
+    position: fixed;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    background-color: black;
+    padding: 1em;
+  }
+  .header-menu {
+    position: static;
+    margin-left: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: auto;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
+  .header-menu li {
+    width: auto;
+  }
+  .header-menu li a {
+    text-align: center;
+  }
+  .header-menu li a:hover {
+    background-color: #292929;
+  }
+  #toggle {
+    display: none;
+  }
+  .comment {
+    display: block;
+    margin: 0 1em;
+  }
+  main section > p {
+    text-align: center;
+    max-width: 660px;
+    padding: 1em;
+    margin: 0.6em auto;
+  }
+  main section:first-child h2 {
+    margin: 2em;
+  }
+  .menu div {
+    max-width: 350px;
+    margin: 0.6em;
+  }
+  .menu div > h3 {
+    font-size: 1.8em;
+  }
+  .menu div > h4 {
+    font-size: 1.4em;
+  }
+  form {
+    max-width: 600px;
+  }
+  #info {
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #info h3:nth-child(2) {
+    font-size: 3em;
+  }
+  .reservation-section h2 {
+    text-align: left;
+  }
+  #info p {
+    max-width: 800px;
+    margin: 1em auto;
+  }
+  .info-list {
+    margin-top: 2em;
+  }
+  .info-grp {
+    text-align: center;
+    max-width: 300px;
+    margin: 1em;
+  }
+  .info-grp h3 {
+    font-size: 1.4em;
+  }
+  .line-space {
+    margin: 3em auto;
+    max-width: 100px;
+  }
+  button {
+    margin: 3em auto;
+  }
+  #menu-section {
+    padding: 0 8em;
+  }
+  .meal-grp {
+    min-width: 400px;
+  }
+  #menu-section h2 {
+    font-size: 2em;
+  }
+  .meal-grp h4 {
+    font-size: 1.4em;
+  }
+  .whatsOn-header h1 {
+    font-size: 3em;
+  }
+  .event-section {
+    margin: 6em 8em;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    gap: 10px;
+        grid-template-areas: "one one one two" "one one one four" "three three three four";
+    height: 80vh;
+  }
+  .event, .event-child {
+    position: relative;
+    width: auto;
+    background-position: center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+    position: relative;
+    margin: 0;
+    text-align: left;
+  }
+  .event-child {
+    height: 100%;
+    width: 100%;
+  }
+  .event-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(173, 173, 173, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+  .event-overlay:hover {
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+    background-color: rgba(43, 43, 43, 0.507);
+  }
+  .event-overlay h2 {
+    font-size: 1.8em;
+    padding: 0.6em;
+    text-align: left;
+    margin: 0;
+  }
+  .event-overlay p {
+    margin: 0;
+    font-size: 1em;
+    padding: 0 0 1em 1em;
+  }
+  .event:first-child {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: one;
+    background-image: url(/images/whiskey.png);
+  }
+  .event:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: two;
+    background-image: url(/images/sushi.png);
+  }
+  .event:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: three;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+  }
+  .event-child:first-child {
+    background-image: url(/images/dumplings.png);
+  }
+  .event-child:last-child {
+    background-image: url(/images/noodle.png);
+    margin-left: 10px;
+  }
+  .event:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+    grid-area: four;
+    background-image: url(/images/traditional.png);
+  }
+}
+/*# sourceMappingURL=main.css.map */
