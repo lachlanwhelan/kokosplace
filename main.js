@@ -15,7 +15,7 @@ async function handleLinkClick(e){
     .then(response => response.json())
     .then(element => {
         const page = element.page
-       history.pushState({page: page}, null, `/${e.target.id}`);
+       history.pushState({page: page}, null, `http://lachlanwhelan.com/kokosplace/${e.target.id}`);
        render(page)
        navMenu.className = 'header-menu';
     })
@@ -27,7 +27,6 @@ function initialise(){
     .then(response => response.json())
     .then(element => {
        history.replaceState({page: element.page}, null, "http://lachlanwhelan.com/kokosplace");
-       
         render(element.page)
     })
 }
