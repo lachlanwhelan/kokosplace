@@ -47,7 +47,7 @@
 }
 
 .home-header {
-  background-image: url(kokosplace/images/fourth-dish.png);
+  background-image: url(/images/fourth-dish.png);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -323,7 +323,7 @@ p {
 
 .image-section {
   height: 80vh;
-  background-image: url(kokosplace/images/chicken-tanban.png);
+  background-image: url(/images/chicken-tanban.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -331,11 +331,11 @@ p {
 }
 
 .image-section#restaurant {
-  background-image: url(kokosplace/images/restaurant.png);
+  background-image: url(/images/restaurant.png);
 }
 
 .image-section#info {
-  background-image: url(kokosplace/images/bar.png);
+  background-image: url(/images/bar.png);
   color: white;
 }
 
