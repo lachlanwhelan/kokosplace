@@ -48,7 +48,6 @@
 
 .home-header {
   background-image: url(images/fourth-dish.png);
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -602,6 +601,9 @@ footer .logo {
     transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
     transition: transform 1s ease, -webkit-transform 1s ease;
+  }
+  .home-header {
+    background-attachment: fixed;
   }
   .header-menu li {
     width: auto;
