@@ -13,10 +13,10 @@
     <nav id="header-nav">
         <a><span class="logo">KOKO's</span></a><!-- <p class="comment">Award-winning Restaurant in Newtown</p> -->
         <ul class="header-menu">
-            <li><a href="/home.html" id="home">Home</a></li>
-            <li><a href="/menu.html" id="menu" >Menu</a></li>
-            <li><a href="/whatson.html" id="whatsOn" >What's On</a></li>
-            <li><a  href="reservation.html" id="reservations" >Reservations</a></li>
+            <li><a href="#home" onclick="loadPage(this)" id="home">Home</a></li>
+            <li><a href="#menu" onclick="loadPage(this)" id="menu" >Menu</a></li>
+            <li><a href="#whatson" onclick="loadPage(this)" id="whatsOn" >What's On</a></li>
+            <li><a  href="#reservations" onclick="loadPage(this)" id="reservations" >Reservations</a></li>
         </ul>
         <div id="toggle">
             <span></span>
@@ -36,18 +36,18 @@
         </section>
     <nav class="footer-nav">
         <ul class="footer-menu">
-            <li><a href="/home.html" id="home">Home</a></li>
-            <li><a href="/menu.html" id="menu" >Menu</a></li>
-            <li><a href="/whatson.html" id="whatsOn" >What's On</a></li>
-            <li><a  href="/reservation.html" id="reservations" >Reservations</a></li>
+            <li><a href="#home" onclick="loadPage(this)" id="home">Home</a></li>
+            <li><a href="#menu" onclick="loadPage(this)" id="menu" >Menu</a></li>
+            <li><a href="#whatson" onclick="loadPage(this)" id="whatsOn" >What's On</a></li>
+            <li><a  href="#reservation" onclick="loadPage(this)" id="reservations" >Reservations</a></li>
         </ul>          
     </nav>
     <div>
         <span class="logo">KOKO'S</span>
     </div>
     </footer>
+    <div id="loader" class="overlay-fade"></div>
 
       <script src="main.js"></script>
-      <div class="loader"></div>
   </body>
 </html>

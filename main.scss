@@ -5,7 +5,7 @@
     font-family: 'Bitter', serif;
 }
 
-.loader{
+#loader{
     position: absolute;
     z-index: 3;
     top: 0;
@@ -17,9 +17,8 @@
 }
 
 .load-fade{
-    background-color: white;
     animation-name: fade-in;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -29,6 +28,7 @@
     }
     to{
         opacity: 0;
+        visibility: hidden;
     }
 }
 

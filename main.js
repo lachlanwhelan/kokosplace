@@ -8,14 +8,14 @@ navToggle.addEventListener('click', () => {
     navToggle.children[1].classList.toggle('span-in');
 })
 
-async function handleLinkClick(e){
+/* async function handleLinkClick(e){
     e.preventDefault();
 
     fetch(`/pages/${e.target.id}.json`)
     .then(response => response.json())
     .then(element => {
         const page = element.page
-       history.pushState({page: page}, null, `/${e.target.id}`);
+       history.pushState({page: page}, null, `${e.target.id}`);
        render(page)
        navMenu.className = 'header-menu';
     })
@@ -26,7 +26,7 @@ function initialise(){
     fetch('/pages/home.json')
     .then(response => response.json())
     .then(element => {
-       history.replaceState({page: element.page}, null, "");
+       history.replaceState({page: element.page}, null, "/");
         render(element.page)
     })
 }
@@ -45,10 +45,18 @@ window.onpopstate = function(event){
 
 
 navMenu.addEventListener('click', handleLinkClick);
-footerMenu.addEventListener('click', handleLinkClick);
-initialise();
+footerMenu.addEventListener('click', handleLinkClick); */
 
-/* function loadPage(e){
+function initialise(){
+    fetch('pages/home.json')
+    .then(response => response.json())
+    .then(page => {
+        const rootElement = document.getElementById('root');
+        rootElement.innerHTML = page.page;
+    })
+}
+
+ function loadPage(e){
     let type = e.id;
     
     switch(type){
@@ -69,20 +77,19 @@ initialise();
 
 function getPage(link){
     const rootElement = document.getElementById('root');
-    fetch('page.json')
+    fetch(`pages/${link}.json`)
     .then(response => response.json())
     .then(element => {
-        const pageToRender = element.pages.filter(page => {
-            return page.type === link
-        })
         navMenu.className = 'header-menu';
-        rootElement.innerHTML = pageToRender[0].page;
+        rootElement.innerHTML = element.page;
     })
 }
-*/
+
 
 window.onload = () => {
     setTimeout(() => {
-        document.getElementsByClassName('loader')[0].className = 'load-fade';
+        document.getElementById('loader').className = 'load-fade';
     }, 1000);
 }
+
+initialise();

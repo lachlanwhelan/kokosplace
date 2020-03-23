@@ -6,7 +6,7 @@
   font-family: 'Bitter', serif;
 }
 
-.loader {
+#loader {
   position: absolute;
   z-index: 3;
   top: 0;
@@ -18,11 +18,10 @@
 }
 
 .load-fade {
-  background-color: white;
   -webkit-animation-name: fade-in;
           animation-name: fade-in;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -33,6 +32,7 @@
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -42,6 +42,7 @@
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
