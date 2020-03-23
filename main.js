@@ -8,6 +8,8 @@ navToggle.addEventListener('click', () => {
     navToggle.children[1].classList.toggle('span-in');
 })
 
+
+
 /* async function handleLinkClick(e){
     e.preventDefault();
 
@@ -19,7 +21,6 @@ navToggle.addEventListener('click', () => {
        render(page)
        navMenu.className = 'header-menu';
     })
-    navToggle.children[1].className = 'span-out';
 }
 
 function initialise(){
@@ -83,6 +84,7 @@ function getPage(link){
         navMenu.className = 'header-menu';
         rootElement.innerHTML = element.page;
     })
+    navToggle.children[1].className = 'span-out';
 }
 
 
