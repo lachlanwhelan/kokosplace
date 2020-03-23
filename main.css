@@ -694,11 +694,15 @@ footer .logo {
   .meal-grp h4 {
     font-size: 1.4em;
   }
+  .whatsOn-header {
+    margin-top: 10vh;
+  }
   .whatsOn-header h1 {
     font-size: 3em;
   }
   .event-section {
-    margin: 6em 8em;
+    margin: 0em auto 8em auto;
+    padding: 0 5em;
     display: -ms-grid;
     display: grid;
     -webkit-box-pack: center;
@@ -710,7 +714,7 @@ footer .logo {
         grid-template-rows: auto;
     gap: 10px;
         grid-template-areas: "one one one two" "one one one four" "three three three four";
-    height: 80vh;
+    height: 75vh;
   }
   .event, .event-child {
     position: relative;
@@ -733,6 +737,31 @@ footer .logo {
     position: relative;
     margin: 0;
     text-align: left;
+  }
+  .event, .event-child {
+    opacity: 0;
+    -webkit-animation-name: whats-on-fade;
+            animation-name: whats-on-fade;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes whats-on-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes whats-on-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   .event-child {
     height: 100%;
@@ -780,13 +809,17 @@ footer .logo {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: one;
-    background-image: url(/images/whiskey.png);
+    background-image: url(images/whiskey.png);
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
   }
   .event:nth-child(2) {
     -ms-grid-row: 1;
     -ms-grid-column: 4;
     grid-area: two;
-    background-image: url(/images/sushi.png);
+    background-image: url(images/sushi.png);
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
   }
   .event:nth-child(3) {
     -ms-grid-row: 3;
@@ -801,20 +834,28 @@ footer .logo {
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 0;
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
   }
   .event-child:first-child {
-    background-image: url(/images/dumplings.png);
+    background-image: url(images/dumplings.png);
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
   }
   .event-child:last-child {
-    background-image: url(/images/noodle.png);
+    background-image: url(images/noodle.png);
     margin-left: 10px;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
   }
   .event:nth-child(4) {
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 4;
     grid-area: four;
-    background-image: url(/images/traditional.png);
+    background-image: url(images/traditional.png);
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s;
   }
 }
 /*# sourceMappingURL=main.css.map */

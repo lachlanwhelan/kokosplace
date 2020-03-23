@@ -653,13 +653,17 @@ footer .logo{
         font-size: 1.4em;
     }
 
+    .whatsOn-header{
+        margin-top: 10vh;
+    }
+
     .whatsOn-header h1{
         font-size: 3em;
     }   
 
-
     .event-section{
-        margin: 6em 8em;
+        margin: 0em auto 8em auto;
+        padding: 0 5em;
         display: grid;
         justify-content: center;
         grid-template-columns:repeat(4, 1fr);
@@ -670,7 +674,7 @@ footer .logo{
         "one one one four"
         "three three three four"
         ;   
-        height: 80vh;
+        height: 75vh;
     }
 
     .event, .event-child{
@@ -687,6 +691,23 @@ footer .logo{
         position: relative;
         margin: 0;
         text-align: left;
+    }
+
+    .event, .event-child{
+        opacity: 0;
+        animation-name: whats-on-fade;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes whats-on-fade {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;  
+        }
     }
 
     .event-child{
@@ -728,12 +749,14 @@ footer .logo{
 
     .event:first-child{
         grid-area: one;
-        background-image: url(/images/whiskey.png);
+        background-image: url(images/whiskey.png);
+        animation-delay: 0.3s;
     }
 
     .event:nth-child(2){
         grid-area: two;
-        background-image: url(/images/sushi.png);
+        background-image: url(images/sushi.png);
+        animation-delay: 0.6s;
     }
 
     .event:nth-child(3){
@@ -741,22 +764,25 @@ footer .logo{
         display: flex;
         flex-direction: row;
         padding: 0;
+        animation-delay: 0.9s;
     }
 
     .event-child:first-child{
-        background-image: url(/images/dumplings.png);
+        background-image: url(images/dumplings.png);
+        animation-delay: 1.2s;
     }
 
     .event-child:last-child{
-        background-image: url(/images/noodle.png);
+        background-image: url(images/noodle.png);
         margin-left: 10px;
+        animation-delay: 1.5s;
     }
 
     .event:nth-child(4){
         grid-area: four;
-        background-image: url(/images/traditional.png);
+        background-image: url(images/traditional.png);
+        animation-delay: 1.8s;
     }
-
 }
 
 
