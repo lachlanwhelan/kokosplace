@@ -37,7 +37,6 @@
     background-position: center;
     background-size: cover;
     height: 100vh;
-    
 }
 
 .subscribe{
@@ -270,7 +269,6 @@ p{
 .image-section{
     height: 80vh;
     background-image: url(images/chicken-tanban.png);
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -544,10 +542,11 @@ footer .logo{
     transition: transform 1s ease;
 }
 
-.home-header{
-    background-attachment: fixed;
-    
+.home-header, .image-section{
+    background-attachment: fixed;  
 }
+
+
 
 .header-menu li{
     width: auto;
