@@ -95,7 +95,7 @@ function getPage(link){
 window.onload = () => {
     setTimeout(() => {
         document.getElementById('loader').className = 'load-fade';
-    }, 1000);
+    }, 3000);
 }
 
 initialise();
