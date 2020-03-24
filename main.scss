@@ -53,6 +53,8 @@ input[type='submit']{
     max-width: 100px;
     margin: 1em 0;
     cursor: pointer;
+    appearance: none;
+    border-radius: 0;
 }
 
 .menu-header{
